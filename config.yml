@@ -1,4 +1,6 @@
-api_key: "" # RazorCap API Key From RazorCap.XYZ
-token: "" # Must Have Admin In The Server You Are Addint The Bot
-proxy: "" # It Is Needed For RazorCap In Order To Solve Captcha
-threads: 3 # Use Low Threads (CAN CAUSE RATELIMIT)
+token: ""
+threads: 3
+solver:
+  service: "anysolver"
+  api_key: ""
+  subservice: "Jett"
