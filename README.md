@@ -31,7 +31,7 @@ threads: 3
 solver:
   service: "anysolver"     # anysolver or ragecaptcha
   api_key: "YOUR_API_KEY"
-  subservice: ""           # anysolver only, leave blank for ragecaptcha
+  subservice: "Jett"           # anysolver only, leave blank for ragecaptcha
 ```
 
 `service` accepts `anysolver` (default) or `ragecaptcha`. The `subservice` field is only used by AnySolver — leave it empty when using RageCaptcha.
