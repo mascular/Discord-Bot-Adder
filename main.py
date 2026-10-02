@@ -55,7 +55,6 @@ def build_xsup() -> str:
     return base64.b64encode(
         json.dumps(data, separators=(",", ":")).encode()
     ).decode()
-
 def _solve_anysolver(proxy: str, rqdata: str) -> str:
     api_key = config["solver"]["api_key"]
     subservice = config["solver"]["subservice"]
@@ -71,7 +70,11 @@ def _solve_anysolver(proxy: str, rqdata: str) -> str:
                 "proxy": proxy,
                 "rqdata": rqdata
             },
-            "provider": subservice
+            "settings": {
+                "routing": {
+                    "provider": subservice
+                }
+            }
         },
         headers={"Content-Type": "application/json"},
         timeout=30
